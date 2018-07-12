@@ -1,6 +1,7 @@
 # seajs插件的使用案例
 在用到seajs的页面中用script标签应用seajs文件，在引入的html文件中t添加一段配置代码：
 <h3>在页面中加载模块</h3>
+
 ```
 // seajs 的简单配置
 seajs.config({
@@ -20,6 +21,7 @@ seajs.use("../static/hello/src/main")
 <h3>模块代码</h3>
 在html页面中引入js文件中的使用方法：
 1.模块代码(index.html的static/index/main.js添加如下代码)
+
 ```
 define(function(require,exports,module) {
     // var title= document.getElementById('title');
@@ -29,25 +31,26 @@ define(function(require,exports,module) {
     title.innerHTML = changeText.text;
 })
 ```
+
 2. jquery代码(lucky的static/lucky/main.js添加如下代码)
-    let lucky = new Lucky();
-    lucky.printTxt('#lucky');
+```
+let lucky = new Lucky();
+lucky.printTxt('#lucky');
 
-    function Lucky(){
-        let _this = this;
-        _this.printTxt = function(tags){
-            $(tags).html('good lucky');
-        }
+function Lucky(){
+    let _this = this;
+    _this.printTxt = function(tags){
+        $(tags).html('good lucky');
     }
-
+}
+```
 <h3>目录结构</h3>
-examples/
-  |-- modules     存放 seajs、jquery 等文件，这也是模块的部署目录
-  |-- static          存放各个项目的 js、css 文件
-  |     |-- hello
-  |     `--  lucky
-  `-- app             存放 html 等文件
-        |-- index.html
-        `-- lucky.html
+  |-- modules     存放 seajs、jquery 等文件，这也是模块的部署目录<br>
+  |-- static          存放各个项目的 js、css 文件<br>
+  |&emsp;|-- hello<br>
+  |&emsp;`--  lucky<br>
+   `-- app             存放 html 等文件<br>
+    &emsp;&emsp;|-- index.html<br>
+    &emsp;&emsp;`-- lucky.html<br>
 
 
