@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    luck---
+</body>
+<script src="../modules/seajs/sea.js"></script>
+<script>
+    // seajs 的简单配置
+seajs.config({
+  base: "../modules/",
+  alias: {
+    "jquery": "jquery/jquery.js"
+  }
+})
+
+// 加载入口模块
+seajs.use("../static/lucky/main")
+</script>
+</html>
